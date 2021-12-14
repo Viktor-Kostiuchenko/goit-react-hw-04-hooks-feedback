@@ -1,0 +1,67 @@
+:root {
+  --ex: #66bb6a;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 150px;
+  height: 130px;
+  margin: 5px;
+  padding: 20px 10px;
+  border-radius: 10px;
+  color: #fff;
+  transition: box-shadow 250ms linear;
+  cursor: pointer;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: left 10px center;
+}
+
+.item:hover {
+  box-shadow: 2px 2px 10px #dadada;
+}
+
+.good {
+  background-image: url('/src/images/like.png');
+  background-color: var(--ex);
+}
+
+.neutral {
+  background-image: url('/src/images/neutral.png');
+  background-color: #26c6da;
+}
+.bad {
+  background-image: url('/src/images/dislike.png');
+  background-color: #ef5350;
+}
+
+.total {
+  background-image: url('/src/images/sigma.png');
+  background-color: #eec94f;
+}
+
+.positive {
+  background-image: url('/src/images/percent.png');
+  background-color: #007bff;
+}
+
+.statName {
+  text-transform: capitalize;
+}
+
+.statResult {
+  font-size: 25px;
+}
