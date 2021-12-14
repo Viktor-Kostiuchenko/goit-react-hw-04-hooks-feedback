@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/goit-react-hw-04-hooks-feedback/static/css/main.c8a7a558.css",
+    "main.js": "/goit-react-hw-04-hooks-feedback/static/js/main.50c1721c.js",
+    "static/media/feedback.png": "/goit-react-hw-04-hooks-feedback/static/media/feedback.d443f9f7aba6241b5649.png",
+    "static/media/percent.png": "/goit-react-hw-04-hooks-feedback/static/media/percent.e1813febb47101de90fd.png",
+    "static/media/like.png": "/goit-react-hw-04-hooks-feedback/static/media/like.50ebe57ca33f6a16b06a.png",
+    "static/media/dislike.png": "/goit-react-hw-04-hooks-feedback/static/media/dislike.9786a15f5461e8cb6c5e.png",
+    "static/media/neutral.png": "/goit-react-hw-04-hooks-feedback/static/media/neutral.00246ab474370fff4b77.png",
+    "static/media/sigma.png": "/goit-react-hw-04-hooks-feedback/static/media/sigma.47c293be817454c415a8.png",
+    "index.html": "/goit-react-hw-04-hooks-feedback/index.html",
+    "main.c8a7a558.css.map": "/goit-react-hw-04-hooks-feedback/static/css/main.c8a7a558.css.map",
+    "main.50c1721c.js.map": "/goit-react-hw-04-hooks-feedback/static/js/main.50c1721c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8a7a558.css",
+    "static/js/main.50c1721c.js"
+  ]
+}
