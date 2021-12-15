@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
 import Section from '../Section';
 import FeedbackOptions from '../FeedbackOptions';
 import StatisticList from '../StatisticList';
 import Notification from '../Notification';
+import { useLocalStorage } from '../../hooks/useLocalStorage';
 import imageUrl from '../../images/feedback.png';
 
 export default function App() {
-  const [good, setGood] = useState(0);
-  const [neutral, setNeutral] = useState(0);
-  const [bad, setBad] = useState(0);
+  const [good, setGood] = useLocalStorage('good', 0);
+  const [neutral, setNeutral] = useLocalStorage('neutral', 0);
+  const [bad, setBad] = useLocalStorage('bad', 0);
 
   const increaseFbAmount = fbName => {
     switch (fbName) {
