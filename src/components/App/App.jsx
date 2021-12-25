@@ -5,58 +5,29 @@ import Notification from '../Notification';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import imageUrl from '../../images/feedback.png';
 
+const initialState = { good: 0, neutral: 0, bad: 0 };
 export default function App() {
-  const [good, setGood] = useLocalStorage('good', 0);
-  const [neutral, setNeutral] = useLocalStorage('neutral', 0);
-  const [bad, setBad] = useLocalStorage('bad', 0);
+  const [state, setState] = useLocalStorage('localStorage', initialState);
 
   const increaseFbAmount = fbName => {
-    switch (fbName) {
-      case 'good':
-        setGood(prevState => prevState + 1);
-        break;
-      case 'neutral':
-        setNeutral(prevState => prevState + 1);
-        break;
-      case 'bad':
-        setBad(prevState => prevState + 1);
-        break;
-      default:
-        return;
-    }
+    setState({ ...state, [fbName]: state[fbName] + 1 });
   };
 
   const decreaseFbAmount = fbName => {
-    switch (fbName) {
-      case 'good':
-        setGood(prevState => prevState - 1);
-        break;
-      case 'neutral':
-        setNeutral(prevState => prevState - 1);
-        break;
-      case 'bad':
-        setBad(prevState => prevState - 1);
-        break;
-      default:
-        return;
-    }
+    setState({ ...state, [fbName]: state[fbName] - 1 });
   };
 
   const countTotalFeedback = () => {
-    return good + neutral + bad;
+    return Object.values(state).reduce((total, value) => total + value, 0);
   };
 
   const countPositiveFeedbackPercentage = () => {
     const total = countTotalFeedback();
-    return Math.trunc((good / total) * 100);
+    return Math.trunc((state.good / total) * 100);
   };
 
   const noFeedbacks = countTotalFeedback() === 0;
-  const options = [
-    ['good', good],
-    ['neutral', neutral],
-    ['bad', bad],
-  ];
+  const options = Object.entries(state);
 
   return (
     <>
