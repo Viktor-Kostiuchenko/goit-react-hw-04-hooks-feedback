@@ -12,7 +12,7 @@ export default function Buttons({
       <button
         className={s.button}
         onClick={() => onDecreaseFbAmount(fbName)}
-        disabled={fbAmount === 0 && true}
+        disabled={fbAmount === 0}
       >
         -
       </button>

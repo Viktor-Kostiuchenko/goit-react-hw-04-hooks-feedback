@@ -17,7 +17,7 @@ export default function FeedbackOptions({
               fbAmount={value}
               onDecreaseFbAmount={onDecreaseFbAmount}
               onIncreaseFbAmount={onIncreaseFbAmount}
-            ></Buttons>
+            />
           </li>
         ))}
       </ul>
